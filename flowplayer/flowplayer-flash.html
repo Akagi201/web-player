@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!-- A minimal Flowplayer setup to get you started -->
+  <!--
+		include flowplayer JavaScript file that does
+		Flash embedding and provides the Flowplayer API.
+	-->
+  <script type="text/javascript" src="flowplayer-3.2.13.min.js"></script>
+  <title>FlowPlayer Flash</title>
+</head>
+<body>
+  <!-- this A tag is where your Flowplayer will be placed. it can be anywhere -->
+	<a
+		 href="http://video-js.zencoder.com/oceans-clip.mp4"
+		 style="display:block;width:520px;height:330px"
+		 id="player">
+	</a>
+
+	<!-- this will install flowplayer inside previous A- tag. -->
+  <script>
+		flowplayer("player", "flowplayer-3.2.18.swf");
+	</script>
+</body>
+</html>
