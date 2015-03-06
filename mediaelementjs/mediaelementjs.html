@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="mediaelement-and-player.min.js"></script>
+  <link rel="stylesheet" href="mediaelementplayer.css" />
+  <title>MediaElement.js Player</title>
+</head>
+<body>
+
+  <video src="h264-aac.mp4" width="320" height="240"></video>
+
+  <script>
+  var v = document.getElementsByTagName("video")[0];
+  new MediaElement(v, {success: function(media) {
+      media.play();
+    }});
+  </script>
+</body>
+</html>
