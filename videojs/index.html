@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>视频直播测试</title>
+        <link rel="stylesheet" href="/static/node_modules/video.js/dist/video-js.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+        <video id="video-demo" width=960 height=540 class="video-js vjs-default-skin" controls autoplay preload="auto">
+            <source src="http://live-up.verystar.cn/vslive/livestream.flv" type="video/flv" />
+            <source src="http://live-up.verystar.cn/vslive/livestream.m3u8" type="application/x-mpegURL" />
+            <source src="rtmp://live-up.verystar.cn/vslive/livestream" type="rtmp/flv" />
+        </video>
+        <script src="/static/node_modules/video.js/dist/video.min.js"></script>
+        <script src="/static/node_modules/videojs-contrib-media-sources/dist/videojs-contrib-media-sources.min.js"></script>
+        <script src="/static/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js"></script>
+        <script>
+            var player = videojs('video-demo', {
+                techOrder: ['html5', 'flash', 'html5'],
+                fluid: true
+            });
+            player.play();
+        </script>
+    </body>
+</html>
